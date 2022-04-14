@@ -1,3 +1,5 @@
+package ListaEncadeada;
+
 
 public class ListaEncadeada {
   private Celula primeira;
@@ -48,7 +50,7 @@ public class ListaEncadeada {
   }
 
   Celula pegaCelula(int posicao) {
-    if(!this.posicaoOcupada(posicao) ) throw new IllegalArgumentException("Posição não existe");
+    if(!this.posicaoOcupada(posicao)) throw new IllegalArgumentException("Posição não existe");
     Celula atual = this.primeira;
 
     for (int i = 0; i < posicao; i += 1) {

@@ -1,6 +1,7 @@
 {
   "java.project.sourcePaths": [
+    "JogoDaMemoria",
     "Listas",
-    "Prova"
+    "Provas"
   ]
 }

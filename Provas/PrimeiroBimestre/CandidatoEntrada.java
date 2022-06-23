@@ -1,4 +1,4 @@
-package Exercicio1;
+package PrimeiroBimestre;
 
 class CandidatoEntrada {
   private String nome;

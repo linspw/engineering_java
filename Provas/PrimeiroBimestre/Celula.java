@@ -1,4 +1,4 @@
-package Exercicio1;
+package PrimeiroBimestre;
 
 public class Celula {
   public Celula proxima;

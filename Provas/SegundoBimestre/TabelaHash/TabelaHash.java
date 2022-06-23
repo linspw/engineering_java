@@ -1,4 +1,4 @@
-package TabelaHash;
+package SegundoBimestre.TabelaHash;
 
 public class TabelaHash {
   public static int hash(int pVal, int ptabdim) {

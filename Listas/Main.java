@@ -1,5 +1,6 @@
 import java.util.Scanner;
-import ListaSkip.ListaSkip;
+
+import SegundoBimestre.ListaSkip.ListaSkip;
 import TabelaHash.TabelaHash;
 
 /* ****************************************************************************************

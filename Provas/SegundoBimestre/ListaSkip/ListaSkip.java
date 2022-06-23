@@ -1,4 +1,4 @@
-package ListaSkip;
+package SegundoBimestre.ListaSkip;
 
 import java.lang.Math;
 

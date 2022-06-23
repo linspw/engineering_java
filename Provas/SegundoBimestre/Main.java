@@ -1,6 +1,7 @@
+package SegundoBimestre;
 import java.util.Scanner;
-import ListaSkip.ListaSkip;
-import TabelaHash.TabelaHash;
+import SegundoBimestre.ListaSkip.*;
+import SegundoBimestre.TabelaHash.*;;
 
 /* ****************************************************************************************
  * Faculdade de Engenharias Arquitetura e Urbanismo (FEAU) (Univap)

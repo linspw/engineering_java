@@ -117,9 +117,11 @@ public class ListaSkip {
     }
     return node.elem;
   }
+
   public boolean search (int pElem) {
     return recSearch(head, pElem, actualLevel - 1) != null;
   }
+
   private static SkipNode recSearch(SkipNode pNode, int pElem, int pLev) {
     if (pElem == pNode.elem) return pNode;
 
@@ -133,7 +135,7 @@ public class ListaSkip {
       return recSearch(pNode, pElem, pLev - 1);
     }
 
-    return recSearch(pNode.next[pLev],pElem,pLev);
+    return recSearch(pNode.next[pLev], pElem, pLev);
   }
   public void delete(int pElem){
     if (this.search(pElem)) {

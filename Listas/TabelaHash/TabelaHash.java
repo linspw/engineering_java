@@ -1,6 +1,6 @@
 package TabelaHash;
 
-public class TabelaHash {
+public final class TabelaHash {
   public static int hash(int pVal, int ptabdim) {
     return pVal % ptabdim;
   }

@@ -41,5 +41,6 @@ public class Main {
     }
     System.out.println(TabelaHash.mostra(tabela));
     // System.out.println(lista.toString());
+    ler.close();
   }
 }

@@ -42,5 +42,6 @@ public class Main {
     prova.apresentaCandidatos(listaCalculada);
 
     prova.pegaVencedor(listaCalculada);
+    ler.close();
   }
 }

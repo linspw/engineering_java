@@ -8,21 +8,21 @@ public class ListaSkip {
     public int elem;
     
     public SkipNode (int pVal, int pLev) {
-      this.elem = pVal;
-      this.next = new SkipNode[pLev];
+      elem = pVal;
+      next = new SkipNode[pLev];
     }
   }
 
   private SkipNode head;
   private int maxLevel;
   private int actualLevel;
-  private int total;
+  private static int total = 0;
 
   public ListaSkip(int pVal, int pMaxLevel) {
     this.head = new SkipNode(pVal, pMaxLevel);
     this.maxLevel = pMaxLevel;
     this.actualLevel = 0;
-    this.total = this.total + 1;
+    this.total++;
   }
 
   public boolean isEmpty() {
@@ -31,7 +31,7 @@ public class ListaSkip {
         return false;
       }
     }
-    if(this.total <= 0) return true;
+    // if(this.total <= 0) return true;
     return true;
   }
 
@@ -48,14 +48,14 @@ public class ListaSkip {
 
   private static void recInsert(SkipNode phead, SkipNode pNew, int pLev) {
     if (phead.next[pLev] == null || pNew.elem < phead.next[pLev].elem) {
-      if (pLev < pNew.next.length){
+      if (pLev < pNew.next.length) {
         pNew.next[pLev] = phead.next[pLev];
         phead.next[pLev] = pNew;
       }
 
       if (pLev == 0) return;
 
-      recInsert(phead, pNew, pLev-1);
+      recInsert(phead, pNew, pLev - 1);
     } else {
       recInsert(phead.next[pLev], pNew, pLev);
     }
@@ -102,8 +102,8 @@ public class ListaSkip {
   public void insert(int pElem){
     int rnd = rand();
     SkipNode ins = new SkipNode(pElem, rnd);
-    recInsert(head, ins, this.actualLevel > 0 ? this.actualLevel - 1 : 0);
-    this.total = total + 1;
+    recInsert(head, ins, this.actualLevel - 1);
+    this.total++;
   }
 
   public int getelement(int posicao) {
@@ -140,7 +140,7 @@ public class ListaSkip {
   public void delete(int pElem){
     if (this.search(pElem)) {
       recDelete(head, pElem, actualLevel - 1);
-      this.total = this.total - 1;
+      this.total = this.total--;
     }
     System.out.println(this.total);
   }
